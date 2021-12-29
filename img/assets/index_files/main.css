@@ -1,0 +1,634 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   reinizialisation figure
+   ========================================================================== */
+   figure {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* ==========================================================================
+   normalize ul
+   ========================================================================== */
+   ul {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    padding-inline-start: 12px;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: darkslategray;
+  }
+
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: darkslategray;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* -----*/
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(255, 117, 67);
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+h4 article {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  align-content: center;
+  color: #222;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #000;
+}
+
+
+.container {
+  display: grid;
+  height:100vh;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 2fr 1.25fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "sidebar2 photo1 photo2 photo3 sidebar"
+    "sidebar2 content1 content1 content1 sidebar"
+    "footer footer footer footer footer";
+  background-color: white;
+  grid-gap: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.studio {
+  display: grid;
+  height:100vh;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 0.5fr 2fr 2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "sidebar2 main main main sidebar"
+    "sidebar2 studiopage studiopage studiopage sidebar"
+    "sidebar2 shoot shoot shoot sidebar"
+    "footer footer footer footer footer";
+  background-color: white;
+  grid-gap: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container2 {
+  display: grid;
+  height:100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr 1.5fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "content2 content2 content2 content2 content2"
+  "sidebar2 title title title sidebar2"
+  "sidebar2 content3 content3 content3 sidebar2"
+  "sidebar2 content4 content4 content4 sidebar2"
+  "button button button button button"
+  "footer footer footer footer footer";
+  background-color: white;
+  grid-gap: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gallery {
+  display: grid;
+  height:100vh;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2.5fr 2fr 1.25fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "sidebar2 photo4 photo5 photo6 sidebar"
+    "sidebar2 photo7 photo8 photo9 sidebar"
+    "sidebar2 contentstudio contentstudio contentstudio sidebar"
+    "footer footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav{
+  grid-area: nav;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  height: 7vh;
+  text-align: center;
+  font-size: smaller;
+  margin: 0rem;
+  padding: auto;
+}
+
+.nav1{
+  grid-area: nav;
+  display:-webkit-inline-flex;
+  background-color: white;
+  text-align-last: center;
+}
+
+.logo{
+  grid-area: logo;
+  display: inline-flexbox;
+  vertical-align: top;
+  margin: 0rem;
+  height: 8.5rem;
+}
+
+.picto{
+  grid-area: picto;
+}
+
+.main{
+  grid-area: main;
+  display: flex;
+  align-content: stretch;
+}
+
+.main1{
+  grid-area: main;
+  background-color: gold;
+}
+
+.sidebar{
+  background-color: white;
+  text-decoration: none;
+  display: flex;
+  -webkit-padding-start: 10px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+.sidebar2{
+  grid-area: sidebar2;
+  background-color:white;
+  text-decoration: none;
+  margin: 0rem;
+}
+
+.studio{
+  grid-area: studio;
+  text-align: center;
+  margin: 0rem;
+}
+
+.title{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(255, 117, 67);
+}
+
+.titlepage{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+  display:-webkit-flex;
+  flex-direction: row;
+  justify-content:space-around;
+  color: rgb(5, 5, 5);
+}
+
+.studiopage{
+  grid-area: studiopage;
+  display: flex;
+  flex-direction: row;
+  align-content:stretch;
+  justify-content:space-around;
+  vertical-align: center;
+  text-align: left;
+  margin: 0%;
+}
+
+.button{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ff3333; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  border-radius: 12px;
+}
+
+.content1{
+  grid-area: content1;
+  display: flex;
+  justify-content:space-around;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.contentstudio{
+  grid-area: contentstudio;
+  display: flex;
+  justify-content:stretch;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.content2{
+  grid-area: content2;
+  background-color: rgb(238, 238, 238);
+  display:-webkit-flex;
+  flex-direction: row;
+  align-content:center;
+  justify-content:space-around;
+  vertical-align: center;
+  text-align: center;
+  margin: 0%;
+}
+
+.content3{
+  grid-area: content3;
+  display:-webkit-inline-flex;
+  justify-content:space-around;
+  text-align: center;
+}
+
+.content4{
+  grid-area: content4;
+  background-color: white;
+  display: flex;
+  text-align: left;
+}
+
+.content5{
+  grid-area: content5;
+  background-color: pink;
+  display:-webkit-inline-flex;
+}
+
+
+.photo1{
+  grid-area: photo1;
+  align-content: stretch;
+  background-color: white;
+}
+
+.photo2{
+  grid-area: photo2;
+  justify-content: stretch;
+  background-color: white;
+}
+
+.photo3{
+  grid-area: photo3;
+  justify-content: stretch;
+  background-color: white;
+}
+
+.photo4{
+  grid-area: photo4;
+  justify-content: stretch;
+}
+
+.photo5{
+  grid-area: photo5;
+  justify-content: stretch;
+}
+
+.photo6{
+  grid-area: photo6;
+  justify-content: stretch;
+}
+
+.photo7{
+  grid-area: photo7;
+  justify-content: stretch;
+  background-color: white;
+}
+
+.photo8{
+  grid-area: photo8;
+  justify-content: stretch;
+  background-color: white;
+}
+
+.photo9{
+  grid-area: photo9;
+  justify-content: stretch;
+  background-color: white;
+}
+
+.figurelogo{
+  align-content: center;
+  justify-items: top;
+  background-color: #fff;
+  transform: scale(0.2fr, 0.2fr);
+  -ms-transform: scale(0.2fr, 0.2fr);
+  -webkit-transform: scale(0.2fr, 0.2fr);
+}
+
+.figurersx{
+  grid-area: sidebar;
+  background-color: #fff;
+}
+
+figure{
+  align-content: center;
+}
+
+.footer{
+  grid-area: footer;
+  height: 4rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}

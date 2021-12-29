@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <https://github.com/ponyo-sosuke> -- <UI design & dev> -- <twitter>
+
+# THANKS
+
+    <El Hachemi Harizi, Julien C., Simplon Flagship Lille>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Visual Studio Code
+
+    UI UX design
+    Figma, Adobe XD
