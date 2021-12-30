@@ -295,6 +295,10 @@ textarea {
 
 /* -----*/
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -325,6 +329,15 @@ p {
   line-height: 1.25rem;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
+}
+
+.pdoe {
+  text-align: left;
+}
+
+.photoabout{
+  padding: 10px; 
+  position: relative; right: 75px;
 }
 
 .container {
@@ -587,6 +600,7 @@ p {
   justify-content:space-around;
   vertical-align: center;
   text-align: center;
+  height: 180px; position: relative; left: 50px;
 }
 
 .content3{
@@ -594,6 +608,7 @@ p {
   display:-webkit-inline-flex;
   justify-content:space-around;
   text-align: center;
+  position: relative; left: 150px; top: 20px; right: 20px;
 }
 
 .content4{
@@ -831,14 +846,6 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 
-
-body {
-  font-family: "Nunito", sans-serif;
-  color: #333;
-  font-weight: 300;
-  line-height: 1.6; 
-}
-
 .containerdoe {
   width: 60%;
   margin: 2rem auto; 
@@ -927,22 +934,6 @@ body {
 /* forms */
 
 
-body {
-
-
-	height: 100vh;
-	
-}
-
-h1 {
-	font-weight: bold;
-	margin: 0;
-}
-
-
-
-
-
 a {
 	color: #333;
 	font-size: 14px;
@@ -963,12 +954,25 @@ button {
 	transition: transform 80ms ease-in;
 }
 
+/**/
+.articlebkg{
+  background-color: rgb(255, 190, 166);
+  border-radius: 12px;
+  width: 240px; 
+  height: 130px; 
+  padding: 12px;
+}
 
+.figclt{
+  width: 225px;
+}
 
-
-
+/**/
 
 .footer{
+  font-family: 'Roboto';
+  font-size: 0.5rem;
+  text-align: center;
   grid-area: footer;
-  height: 4rem;
+  height: 1.8rem;
 }
