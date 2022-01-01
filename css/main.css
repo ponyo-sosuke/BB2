@@ -300,6 +300,14 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1, h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -341,21 +349,7 @@ p {
   position: relative; right: 75px;
 }
 
-.container {
-  display: grid;
-  width: 100vw;
-  height:100vh;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-  grid-template-rows: 2fr 2fr 1.25fr 0.8fr;
-  grid-template-areas:
-    "nav nav nav nav nav"
-    "sidebar2 photo1 photo2 photo3 sidebar"
-    "sidebar2 content1 content1 content1 sidebar"
-    "footer footer footer footer footer";
-  background-color: white;
-  grid-gap: 0.2rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .studio {
   display: grid;
@@ -374,22 +368,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container2 {
-  display: grid;
-  height:100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.5fr 0.5fr 1.5fr 1fr 1fr 1fr;
-  grid-template-areas:
-  "content2 content2 content2 content2 content2"
-  "sidebar2 title title title sidebar2"
-  "sidebar2 content3 content3 content3 sidebar2"
-  "sidebar2 content4 content4 content4 sidebar2"
-  "button button button button button"
-  "footer footer footer footer footer";
-  background-color: white;
-  grid-gap: 0.2rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .container3 {
   display: grid;
@@ -481,13 +460,6 @@ css special nav ------------------------------------------------------------*/
   text-align-last: center;
 }
 
-/* fin css nav ---------------------------------------------*/
-
-.cursor{
-  grid-area: cursor;
-  text-align: center;
-}
-
 .logo{
   grid-area: logo;
   display: inline-flexbox;
@@ -496,10 +468,8 @@ css special nav ------------------------------------------------------------*/
   height: 7.5rem;
 }
 
-.picto{
-  grid-area: picto;
-  height: 44px;
-}
+/* fin css nav ---------------------------------------------*/
+
 
 /* ---- main -------------------------------------------*/
 
@@ -532,107 +502,51 @@ css special nav ------------------------------------------------------------*/
   margin: 0rem;
 }
 
-/* ---- page studio ---- ----------------------------*/
+/* =========== pages ===================================================== */
 
-.studio{
-  grid-area: studio;
-  text-align: center;
-  margin: 0rem;
-}
+/* ---- page home (hors nav et footer) -----------------------------------*/
 
-.title{
-  flex: content;
+.container {
+  display: grid;
+  width: 100vw;
+  height:100vh;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 2fr 1.25fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "sidebar2 photo1 photo2 photo3 sidebar"
+    "sidebar2 content1 content1 content1 sidebar"
+    "footer footer footer footer footer";
+  background-color: white;
+  grid-gap: 0.2rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  text-align: center;
-  color: rgb(255, 117, 67);
 }
-
-.titlepage{
-  flex: content;
+/* deuxieme partie page */
+.container2 {
+  display: grid;
+  height:100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr 1.5fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "content2 content2 content2 content2 content2"
+  "sidebar2 title title title sidebar2"
+  "sidebar2 content3 content3 content3 sidebar2"
+  "sidebar2 content4 content4 content4 sidebar2"
+  "button button button button button"
+  "footer footer footer footer footer";
+  background-color: white;
+  grid-gap: 0.2rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  text-align: left;
-  display:-webkit-flex;
-  flex-direction: row;
-  justify-content:space-around;
-  color: rgb(5, 5, 5);
+}
+/* elements */
+.picto{
+  grid-area: picto;
+  height: 44px;
 }
 
-.studiopage{
-  grid-area: studiopage;
-  display: flex;
-  flex-direction: row;
-  align-content:stretch;
-  justify-content:space-around;
-  vertical-align: center;
-  text-align: left;
-  margin: 0%;
-}
-
-.button{
-  flex: content;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #ff3333;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 12px;
-}
-
-
-.content1{
-  grid-area: content1;
-  display: flex;
-  justify-content:space-around;
-  text-align: center;
-  border-radius: 12px;
-  vertical-align: middle;
-}
-
-.contentstudio{
-  grid-area: contentstudio;
-  display: flex;
-  justify-content:stretch;
-  text-align: center;
-  border-radius: 12px;
-  margin: 0rem;
-}
-
-.content2{
-  grid-area: content2;
-  display:-webkit-flex;
-  flex-direction: row;
-  align-content:center;
-  justify-content:space-around;
-  vertical-align: center;
-  text-align: center;
-  height: 180px; position: relative; left: 50px;
-}
-
-.content3{
-  grid-area: content3;
-  display:-webkit-inline-flex;
-  justify-content:space-around;
-  text-align: center;
-  position: relative; left: 150px; top: 20px; right: 20px;
-}
-
-.content4{
-  grid-area: content4;
-  display: flex;
-  text-align: left;
-}
-
-.content5{
-  grid-area: content5;
-  display:-webkit-inline-flex;
+.figurersx{
+  grid-area: sidebar;
+  background-color: #fff;
 }
 
 .photo{
@@ -661,6 +575,134 @@ css special nav ------------------------------------------------------------*/
   justify-self: center;
   background-color: white;
 }
+
+.content1{
+  grid-area: content1;
+  display: flex;
+  justify-content:space-around;
+  text-align: center;
+  border-radius: 12px;
+  vertical-align: middle;
+}
+
+.content2{
+  grid-area: content2;
+  display:-webkit-flex;
+  flex-direction: row;
+  align-content:center;
+  justify-content:space-around;
+  vertical-align: center;
+  text-align: center;
+  height: 180px; position: relative; left: 50px;
+}
+
+.content3{
+  grid-area: content3;
+  display:-webkit-inline-flex;
+  justify-content:space-around;
+  text-align: center;
+  position: relative; left: 150px; top: 20px; right: 20px;
+}
+
+.content4{
+  grid-area: content4;
+  display: flex;
+  text-align: left;
+}
+
+.articlebkg{
+  background-color: rgb(255, 190, 166);
+  border-radius: 12px;
+  width: 240px; 
+  height: 130px; 
+  padding: 12px;
+}
+
+.figclt{
+  width: 225px;
+}
+
+.title{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(255, 117, 67);
+}
+
+
+/* ---- page studio ---- ----------------------------*/
+
+.studio{
+  grid-area: studio;
+  text-align: center;
+  margin: 0rem;
+}
+
+.titlepage{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+  display:-webkit-flex;
+  flex-direction: row;
+  justify-content:space-around;
+  color: rgb(5, 5, 5);
+}
+
+.studiopage{
+  grid-area: studiopage;
+  display: flex;
+  flex-direction: row;
+  align-content:stretch;
+  justify-content:space-around;
+  vertical-align: center;
+  text-align: left;
+  margin: 0%;
+}
+
+/* ---- page gallery -----------------------------------*/
+
+.cursor{
+  grid-area: cursor;
+  text-align: center;
+}
+
+/* ---- */
+
+.button{
+  flex: content;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ff3333;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+
+
+.contentstudio{
+  grid-area: contentstudio;
+  display: flex;
+  justify-content:stretch;
+  text-align: center;
+  border-radius: 12px;
+  margin: 0rem;
+}
+
+.content5{
+  grid-area: content5;
+  display:-webkit-inline-flex;
+}
+
+
 
 .photo4{
   grid-area: photo4;
@@ -704,10 +746,7 @@ css special nav ------------------------------------------------------------*/
   -webkit-transform: scale(0.2fr, 0.2fr);
 }
 
-.figurersx{
-  grid-area: sidebar;
-  background-color: #fff;
-}
+/* ---- communs aux pages */
 
 figure{
   align-content: center;
@@ -715,7 +754,7 @@ figure{
 
 
 
-/* debut carousel */
+/* debut carousel-------------------------------------------------------------------- */
 
 .carousel {
   margin-left: 15%;
@@ -847,9 +886,9 @@ opacity: 1;
 
 input:checked + .slide-container .nav label { display: block; }
 
-/* fin carousel */
+/* fin carousel ------------------------------------------------------------------- */
 
-/* gallerydoe */
+/* gallerydoe debut ----------------------------------------------------------------*/
 *,
 *::after,
 *::before {
@@ -942,7 +981,7 @@ input:checked + .slide-container .nav label { display: block; }
   /* grid-column: 5 / span 4; */
   /* grid-row: 6 / span 3; */
 }
-
+/* gallerydoe fin ------------------------------------------------------------------*/
 
 /* forms */
 
@@ -954,6 +993,7 @@ a {
 	margin: 15px 0;
 }
 
+/* BUTTON commun a differentes pages =============================================== */
 button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
@@ -967,20 +1007,9 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-/**/
-.articlebkg{
-  background-color: rgb(255, 190, 166);
-  border-radius: 12px;
-  width: 240px; 
-  height: 130px; 
-  padding: 12px;
-}
 
-.figclt{
-  width: 225px;
-}
 
-/**/
+/* footer -------------------------------------------------------------------------*/
 
 .footer{
   font-family: 'Roboto';
