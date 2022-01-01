@@ -293,7 +293,8 @@ textarea {
   }
 }
 
-/* -----*/
+/* --------------------------------------------------------------------------
+ici commence mon css ------------------------------------------------------*/
 
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -439,6 +440,10 @@ p {
   position: relative; top: 100px;
 }
 
+
+/* -------------------------------------------------------------------------
+css special nav ------------------------------------------------------------*/
+
 .nav ul:hover{
   font-weight: 500;
   color: #ff3333;
@@ -476,6 +481,8 @@ p {
   text-align-last: center;
 }
 
+/* fin css nav ---------------------------------------------*/
+
 .cursor{
   grid-area: cursor;
   text-align: center;
@@ -494,6 +501,8 @@ p {
   height: 44px;
 }
 
+/* ---- main -------------------------------------------*/
+
 .main{
   grid-area: main;
   display: flex;
@@ -504,6 +513,8 @@ p {
   grid-area: main;
   background-color: gold;
 }
+
+/* ----  side bars -------------------------------- ---- */
 
 .sidebar{
   background-color: white;
@@ -520,6 +531,8 @@ p {
   text-decoration: none;
   margin: 0rem;
 }
+
+/* ---- page studio ---- ----------------------------*/
 
 .studio{
   grid-area: studio;
